@@ -1,29 +1,23 @@
 {
-  "name": "mongoscraper",
+  "name": "Femininewst",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
     "dotenv": "^7.0.0",
-    "eslint": "^5.15.3",
-    "eslint-plugin-json": "^1.4.0",
-    "eslint-plugin-markdown": "^1.0.0",
-    "travis": "^0.1.1"
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.4.20",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {},
   "scripts": {
-    "lint": "eslint . --ext .json --ext .md",
-    "pretest": "npm run lint",
-    "test": "echo \"No tests\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jpirrone104/MongoScraper.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jpirrone104/MongoScraper/issues"
-  },
-  "homepage": "https://github.com/jpirrone104/MongoScraper#readme"
+  "license": "ISC"
 }
