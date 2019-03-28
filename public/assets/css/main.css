@@ -1,0 +1,58 @@
+
+
+body {
+  background-color: whitesmoke;
+  font-size: 62.5%;
+  font-family: arial;
+
+
+}
+
+a:active {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+
+
+
+#vegan{
+  color: green;
+  font-family: cursive;
+}
+
+
+
+
+.modal-content {
+  background-image: url('../img/vegetables.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: center 12%;
+  border-radius: 0;
+  font-family: 'Rock Salt', cursive;
+  color:whitesmoke;
+
+}
+
+.modal-body {
+  padding-top: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  margin-bottom: 20px;
+  
+}
+
+
+
+

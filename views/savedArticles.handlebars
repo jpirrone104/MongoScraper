@@ -1,0 +1,61 @@
+  <header class="jumbotron">
+    <h1 id="vegan">Saved Articles</h1>
+    <nav class="button-group">
+      <a href="/"><button class="btn btn-success">Home</button></a>
+    </nav>
+  </header>
+
+  {{!-- #each to iterate through articles and create article panels --}}
+  <div class="container">
+  {{#each articles}}
+    {{#if saved}}
+   
+      <div class="card" style="width: 18rem;">
+          <a href="{{storyUrl}}"><img class="card-img-top" src="{{imgUrl}}" alt="Card image Cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{headline}}</h5>
+            <p class="card-text">{{summary}}</p>
+            <button class="addComment btn btn-success" data-id="{{_id}}">Add Comment</button>
+            <button class="deleteArticle btn btn-success" data-id="{{_id}}">Delete Article</button>
+          </div>
+      </div>
+  
+    {{/if}}
+  {{/each}}
+
+  </div>
+
+  {{!-- modal for displaying and creating comments --}}
+  <div id="commentModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Add a comment</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="commentTitleEntry" class="commentInput" placeholder="Enter Title">
+          <input type="text" id="commentBodyEntry" class="commentInput" placeholder="Enter Body">
+          <div id="commentArea"></div>
+        </div>
+        <div class="modal-footer">
+          <h5 class="instructions">Click the comment to read it, or X to delete</h5>
+          <button type="button" id="submitComment">Save Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- error modal --}}
+  <div id="error" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h2>There was an error processing your request.  Please try again later.</h2>
+        </div>
+      </div>
+    </div>
+  </div>

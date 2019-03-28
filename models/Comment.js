@@ -8,11 +8,11 @@ var mongoose = require("mongoose");
 var CommentSchema = new mongoose.Schema({
   Title: {
     type: String,
-    required: true
+  
   },
   Body: {
     type: String,
-    required: true
+  
   },
   User: { type: mongoose.Schema.Types.ObjectId, ref: "User"},
   Article: { type: mongoose.Schema.Types.ObjectId, ref: "Article"},
