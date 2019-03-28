@@ -4,8 +4,8 @@ const express = require('express'),
       exphbs = require('express-handlebars'),
       bodyParser = require('body-parser'),
       logger = require('morgan'),
-      path = require('path'),
-      favicon = require('serve-favicon');
+      path = require('path');
+      //favicon = require('serve-favicon');
 
 
 //initializing the app
@@ -21,8 +21,7 @@ mongoose
   })
   .catch(err => console.log('There was an error with your connection:', err));
 
-//setting up favicon middleware
-app.use(favicon(path.join(__dirname, 'public', 'assets/img/favicon.ico')));
+//app.use(favicon(path.join(__dirname, 'public', 'assets/img/favicon.ico')));
 
 //setting up Morgan middleware
 app.use(logger('dev'));
